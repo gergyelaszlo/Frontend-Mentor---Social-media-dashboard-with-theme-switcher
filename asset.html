@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Assets</title>
+</head>
+<style>
+
+    body {
+        background-color: var(--very-dark-blue-bg);
+        padding: 5rem 5rem;
+    }
+
+    .container {
+        background-color: var(--very-dark-blue-top-bg);
+    }
+
+    .title {
+        justify-content: space-between;
+    }
+
+    .toggle-div > p {
+        padding-right: 2rem;
+    }
+
+    .toggle {
+        position: relative;
+        height: 26px;
+        width: 50px;
+        border-radius: 100px;
+        cursor: pointer;
+        background: linear-gradient(90deg, hsl(210, 78%, 56%) 5%, hsl(146, 68%, 55%) 100%);
+    }
+
+    .toggle::before {
+        content: "";
+        position: absolute;
+        height: 17px;
+        width: 17px;
+        border-radius: 100px;
+        background: var(--dark-desaturated-blue-card-bg);
+        top: 50%;
+        left: 3px;
+        transform: translateY(-50%);
+        transition: all .3s ease-in-out;
+    }
+
+    .toggle.active::before {
+        background-color: var(--light-mode);
+        left: calc(100% - 20px - 3px);
+    }
+
+</style>
+<body>
+
+    <div class="container">
+      <header>
+        <div class="title | flex">
+          <h4>Social Media Dashboard</h4>
+          <div class="toggle-div | flex">
+            <p>Dark Mode</p>
+            <div class="toggle"></div>
+          </div>
+        </div>
+        <div class="followers">
+          <p>Total Followers: 23,004</p>
+        </div>
+      </header>
+    </div>
+
+<script></script>
+</body>
+</html>
